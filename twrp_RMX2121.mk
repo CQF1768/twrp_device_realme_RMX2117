@@ -27,10 +27,10 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Device specific configs.
 $(call inherit-product, device/realme/RMX2121/device.mk)
 
-PRODUCT_DEVICE := RMX2121
-PRODUCT_NAME := twrp_RMX2121
+PRODUCT_DEVICE := RMX2117
+PRODUCT_NAME := twrp_RMX2117
 PRODUCT_BRAND := Realme
-PRODUCT_MODEL := Realme X7 Pro
+PRODUCT_MODEL := Realme Narzo 30 Pro 5G
 PRODUCT_MANUFACTURER := Realme
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_DEVICE="RMX2121CN"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_DEVICE="RMX2117"
