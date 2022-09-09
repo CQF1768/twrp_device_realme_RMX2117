@@ -1,13 +1,4 @@
-# TWRP device tree for Realme X7 Pro
- This device tree has been stop developing
-# Status
-Working:fastbootd
-        adb
-        otg
-        mtp
-        data decryption(without password)
-
-Not Working: data decryption(with password)
+# TWRP device tree for Realme Narzo 30 Pro 5G
 
 # Build Note 
 add addition patch to fix data decryption(without password)
