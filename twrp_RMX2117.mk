@@ -24,6 +24,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
+	$(LOCAL_PATH)/prebuilt/dtb:dtb.img
+
 # Device specific configs.
 $(call inherit-product, device/realme/RMX2117/device.mk)
 
@@ -34,3 +37,21 @@ PRODUCT_MODEL := RM6853
 PRODUCT_MANUFACTURER := Realme
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_DEVICE="RMX2117"
+
+# Dynamic
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Extra required packages
+PRODUCT_PACKAGES += \
+    libion
+    
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
+
+# HACK: Set vendor patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.build.security_patch=2099-12-31 \
+    ro.bootimage.build.date.utc=0 \
+    ro.build.date.utc=0
