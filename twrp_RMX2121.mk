@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device specific configs.
-$(call inherit-product, device/realme/RMX2121/device.mk)
+$(call inherit-product, device/realme/RMX2117/device.mk)
 
 PRODUCT_DEVICE := RMX2117
 PRODUCT_NAME := twrp_RMX2117
