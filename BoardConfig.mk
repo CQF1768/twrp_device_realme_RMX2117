@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/RMX2121
+DEVICE_PATH := device/realme/RMX2117
 
 ALLOW_MISSING_DEPENDENCIES := true
 
@@ -41,10 +41,10 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Platform
-TARGET_BOARD_PLATFORM := mt6889
+TARGET_BOARD_PLATFORM := mt6853
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := RMX2121,RMX2121L1,RMX2121PU,RMX2121CN,rmx2121
+TARGET_OTA_ASSERT_DEVICE := RMX2117, rmx2117
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2,androidboot.selinux=permissive
